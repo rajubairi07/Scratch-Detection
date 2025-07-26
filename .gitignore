@@ -1,0 +1,20 @@
+# Python virtual environment
+venv/
+__pycache__/
+
+# Keras/TensorFlow model files
+/checkpoints/
+*.h5
+
+# Prediction output files
+*_predicted_mask.png
+*_overlay.png
+
+# IDE and OS files
+.vscode/
+.idea/
+.DS_Store
+
+# Large datasets
+/data/
+/masks/

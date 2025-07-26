@@ -1,0 +1,25 @@
+# -------------------------------------
+# Configuration for Scratch Detection Training
+# -------------------------------------
+
+# --- File and Directory Paths ---
+paths:
+  # Using forward slashes is recommended for cross-platform compatibility
+  base_data_path: 'C:/Users/rajub/Desktop/Scratch Detection/Scratch-Detection/data'
+  base_mask_path: 'C:/Users/rajub/Desktop/Scratch Detection/Scratch-Detection/data/masks'
+  # Path to save the final model after training is complete
+  model_save_path: 'scratch_detector_final.h5'
+  # Path and filename pattern for saving checkpoints after each epoch.
+  # {epoch:02d} will be replaced with the epoch number.
+  checkpoint_save_path: 'checkpoints/model_epoch_{epoch:02d}.h5'
+
+# --- Image and Model Parameters ---
+model_params:
+  img_height: 128
+  img_width: 128
+  img_channels: 1
+
+# --- Training Hyperparameters ---
+training_params:
+  epochs: 50
+  batch_size: 8
