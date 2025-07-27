@@ -110,7 +110,7 @@ if __name__ == '__main__':
 
     predicted_mask_resized = cv2.resize(predicted_mask, (original_shape[1], original_shape[0]))
 
-    confidence_threshold = 0.1 
+    confidence_threshold = 0.5
     pixel_threshold = int(confidence_threshold * 255)
     _, binary_mask = cv2.threshold((predicted_mask_resized * 255).astype(np.uint8), pixel_threshold, 255, cv2.THRESH_BINARY)
     

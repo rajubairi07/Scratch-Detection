@@ -4,7 +4,6 @@
 
 # --- File and Directory Paths ---
 paths:
-  # Using forward slashes is recommended for cross-platform compatibility
   base_data_path: 'C:/Users/rajub/Desktop/Scratch Detection/Scratch-Detection/data'
   base_mask_path: 'C:/Users/rajub/Desktop/Scratch Detection/Scratch-Detection/data/masks'
   # Path to save the final model after training is complete
@@ -13,7 +12,7 @@ paths:
   # {epoch:02d} will be replaced with the epoch number.
   checkpoint_save_path: 'checkpoints/model_epoch_{epoch:02d}.h5'
 
-# --- Image and Model Parameters ---
+# --- Image and Model Parameters ---s
 model_params:
   img_height: 128
   img_width: 128
@@ -21,5 +20,14 @@ model_params:
 
 # --- Training Hyperparameters ---
 training_params:
-  epochs: 50
+  epochs: 15
   batch_size: 8
+
+# -------------------
+# Prediction Parameters
+# -------------------
+prediction:
+  # Confidence level (from 0.0 to 1.0) required to consider a pixel a scratch
+  confidence_threshold: 0.45
+  # Minimum number of scratch pixels required to classify an image as 'bad'
+  pixel_threshold_for_bad_image: 35
