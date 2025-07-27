@@ -29,7 +29,6 @@ def main():
     with open('config.yaml', 'r') as f:
         config = yaml.safe_load(f)
 
-    # --- CORRECTED LINES ---
     # Reads from the 'model_params' section as you correctly pointed out
     img_height = config['model_params']['img_height']
     img_width = config['model_params']['img_width']
