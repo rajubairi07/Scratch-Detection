@@ -5,8 +5,6 @@ import albumentations as A
 import random
 
 # Define the augmentation pipeline
-# This pipeline applies a series of random transformations.
-# p=0.5 means each transformation has a 50% chance of being applied.
 transform = A.Compose([
     A.HorizontalFlip(p=0.5),
     A.VerticalFlip(p=0.5),

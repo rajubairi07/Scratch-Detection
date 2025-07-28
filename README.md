@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Scratch-Detection
-=======
 Scratch Detection using U-Net
 Project Overview
 This project is a deep learning solution for automatically identifying and locating scratch defects on images of text. It uses a U-Net segmentation model, built with TensorFlow and Keras, to classify each pixel in an image as either a scratch or background, generating a precise mask that highlights any damage.
@@ -26,7 +23,7 @@ Scratch-Detection/
 └── requirements.txt        # List of Python dependencies
 
 What I've Done
-This project involved several key stages, from data preparation to model deployment:
+This project involved several key stages, from data preparation to model testing:
 
 Data Sourcing and Structuring: I organized the dataset into train and test folders, further subdivided into good (no defects) and bad (with scratches) categories. I created corresponding pixel-perfect masks for every "bad" image, which are essential for training the segmentation model.
 
@@ -78,4 +75,3 @@ python train.py
 
 5. Make a Prediction
 python predict.py --image "C:/path/to/your/new_image.png"
->>>>>>> feded78 (Initial commit: U-Net scratch detection project setup)

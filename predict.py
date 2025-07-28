@@ -84,7 +84,6 @@ if __name__ == '__main__':
     IMG_WIDTH = config['model_params']['img_width']
 
     # Load the trained model
-    # We don't need to compile it for prediction
     model = load_model(MODEL_TO_LOAD, compile=False)
 
     # Load and preprocess the input image
@@ -117,7 +116,7 @@ if __name__ == '__main__':
     # --- 6. Classify Image as Good or Bad ---
     # Define a threshold for how many scratch pixels count as a "bad" image
     # This helps ignore tiny noise or insignificant detections.
-    scratch_pixel_threshold = 50 
+    scratch_pixel_threshold = 35
     
     # Count the number of white pixels (scratches) in the binary mask
     num_scratch_pixels = cv2.countNonZero(binary_mask)
